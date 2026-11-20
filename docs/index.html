@@ -25,10 +25,10 @@
       Borra este comentario cuando termines.
     -->
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Nombre Apellidos — Perfil</title>
+    <title>Luis Barria — Perfil</title>
 
     <!-- CSS específico de esta página -->
-    <link rel="stylesheet" href="./assets/css/about-apellidos-nombre.css">
+    <link rel="stylesheet" href="./assets/css/about-barria-luis.css">
 
     <!-- Descripción breve (práctica de metadatos/SEO) -->
     <meta
@@ -51,8 +51,8 @@
           </div>
 
           <!-- EDITA: nombre y tagline -->
-          <h1 class="nombre">Nombre Apellidos</h1>
-          <p class="tagline">Estudiante de Desarrollo de Software · {{GRUPO}}-{{NN}}</p>
+          <h1 class="nombre">Luis Barria</h1>
+          <p class="tagline">Estudiante de Desarrollo de Software · 4GS121-02</p>
         </div>
 
         <!-- Logos institucionales (no cambiar rutas) -->
@@ -72,12 +72,12 @@
       <aside class="sidebar">
         <figure class="perfil">
           <img
-            src="./assets/img/foto-apellidos-nombre-480.webp"
+            src="./assets/img/foto-barria-luis-480.webp"
             srcset="
-              ./assets/img/foto-apellidos-nombre-160.webp 160w,
-              ./assets/img/foto-apellidos-nombre-320.webp 320w,
-              ./assets/img/foto-apellidos-nombre-480.webp 480w,
-              ./assets/img/foto-apellidos-nombre-640.webp 640w
+              ./assets/img/foto-barria-luis-160.webp 160w,
+              ./assets/img/foto-barria-luis-320.webp 320w,
+              ./assets/img/foto-barria-luis-480.webp 480w,
+              ./assets/img/foto-barria-luis-640.webp 640w
             "
             sizes="(max-width: 700px) 128px, 160px"
             alt="Nombre Apellidos, estudiante de LDGS UTP FISC Veraguas"
@@ -94,13 +94,13 @@
           <h2>Contacto</h2>
           <ul class="lista-contacto">
             <li>
-              <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>
+              <a href="mailto:{{EMAIL}}">luis.barria6@utp.ac.pa</a>
             </li>
             <li>
-              <a target="_blank" rel="noopener noreferrer" href="{{LINKEDIN}}">LinkedIn</a>
+              <a target="_blank" rel="noopener noreferrer" href="{{LINKEDIN}}">https://www.linkedin.com/in/luis-barria-794230442/</a>
             </li>
             <li>
-              <a target="_blank" rel="noopener noreferrer" href="{{GITHUB}}">GitHub</a>
+              <a target="_blank" rel="noopener noreferrer" href="{{GITHUB}}">https://github.com/luis-barria</a>
             </li>
             <li>
               <a href="./modulos/index.html">Mis entregas del curso</a>
@@ -115,16 +115,13 @@
           <h3>Lenguajes</h3>
           <div class="chips">
             <span class="chip">Java</span>
-            <span class="chip">JavaScript</span>
-            <span class="chip">Python</span>
             <span class="chip">SQL</span>
+            <span class="chip">C#</span>
           </div>
 
           <h3>Frameworks & Librerías</h3>
           <div class="chips">
-            <span class="chip">Spring Boot</span>
-            <span class="chip">React</span>
-            <span class="chip">Node.js</span>
+            <span class="chip">.Net</span>
           </div>
 
           <h3>Bases de datos</h3>
@@ -136,15 +133,12 @@
           <h3>Herramientas</h3>
           <div class="chips">
             <span class="chip">Git</span>
-            <span class="chip">Docker</span>
-            <span class="chip">Postman</span>
             <span class="chip">Figma</span>
           </div>
 
           <h3>Metodologías</h3>
           <div class="chips">
             <span class="chip">Scrum</span>
-            <span class="chip">Kanban</span>
           </div>
         </section>
       </aside>
@@ -153,7 +147,7 @@
       <main class="contenido">
         <section class="resumen card">
           <h2>Acerca de mí</h2>
-          <p>{{RESUMEN_BREVE_ELEVATOR_PITCH}}</p>
+          <p>Soy estudiante de Desarrollo y Gestión de Software en la UTP. Me interesa la programación, el desarrollo backend y la ciberseguridad. Actualmente estoy fortaleciendo mis habilidades en Java, SQL y Git mientras desarrollo proyectos académicos y personales.</p>
         </section>
 
         <!-- Duplica <article.proyecto> por cada proyecto -->
@@ -162,15 +156,11 @@
           <div class="proyectos-flex">
             <article class="proyecto">
               <header class="proyecto-head">
-                <h3>{{NOMBRE_PROYECTO}}</h3>
-                <div class="proyecto-links">
-                  <a target="_blank" rel="noopener noreferrer" href="{{URL_GITHUB}}">Código</a>
-                  <a target="_blank" rel="noopener noreferrer" href="{{URL_DEMO}}">Demo</a>
-                </div>
+                <h3>Sistema de inventario para tienda en SQL Server</h3>
               </header>
-              <p>{{DESCRIPCION_PROYECTO}}</p>
-              <p class="rol"><strong>Rol:</strong> {{ROL}}</p>
-              <p class="tech"><strong>Tecnologías:</strong> {{TECNOLOGIAS}}</p>
+              <p>Sistema de inventario desarrollado como proyecto académico para gestionar productos, entradas, salidas y existencias de una tienda.</p>
+              <p class="rol"><strong>Rol:</strong> Diseño e implementación de la base de datos</p>
+              <p class="tech"><strong>Tecnologías:</strong> SQL Server, SQL, Modelo Entidad-Relación</p>
             </article>
           </div>
         </section>
@@ -180,9 +170,8 @@
           <ul class="timeline">
             <li>
               <div class="item">
-                <h3>{{CARGO}} — {{ORGANIZACION}}</h3>
-                <span class="meta">{{FECHA}}</span>
-                <p>{{RESPONSABILIDADES_LOGROS}}</p>
+                <h3>Desarrollador de Proyecto Académico — Universidad Tecnológica de Panamá</h3>
+                <span class="meta">2026</span>
               </div>
             </li>
           </ul>
@@ -193,7 +182,7 @@
           <ul class="listado-simple">
             <li>
               <strong>Licenciatura en Desarrollo y Gestión de Software</strong>
-              — UTP, Centro Regional de Veraguas ({{ANIO_INICIO}}–{{ANIO_FIN}})
+              — UTP, Centro Regional de Veraguas (2025–Actualidad)
             </li>
           </ul>
         </section>
@@ -201,16 +190,12 @@
         <section class="certificaciones card">
           <h2>Certificaciones y Cursos</h2>
           <ul class="listado-simple">
-            <li>{{CERTIFICACION_1}}</li>
-            <li>{{CURSO_1}}</li>
+            <li>Congreso COICIC 2025</li>
           </ul>
         </section>
 
         <section class="extra card">
-          <h2>Logros · Artículos · Intereses</h2>
-          <ul class="listado-simple">
-            <li>{{LOGRO_O_ARTICULO}}</li>
-          </ul>
+
         </section>
       </main>
 
