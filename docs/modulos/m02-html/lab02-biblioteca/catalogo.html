@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               img-src 'self';
+               style-src 'self';
+               base-uri 'self';
+               form-action 'self'">
+    <meta name="description" content="Servicio de préstamo a domicilio de la Biblioteca Universitaria">
+    <meta name="author" content="Equipo 04 - Grupo 4GS121">
+    <title>Catálogo y préstamos | Biblioteca Universitaria</title>
+
+    <link rel="stylesheet" href="assets/css/biblioteca-base.css">
+</head>
+<body>
+<a href="#contenido">Saltar al contenido</a>
+
+<header>
+    <img src="assets/img/logo-biblioteca.svg" alt="">
+
+    <hgroup>
+        <h1>Biblioteca Universitaria</h1>
+        <p>Servicio de préstamo a domicilio</p>
+    </hgroup>
+
+    <p>
+        Equipo 04 · Grupo 4GS121<br>
+        Luis Barría · 4GS121-02<br>
+        Jhonatan Fernandez · 4GS121-05<br>
+        Jesús Santos · 4GS121-12
+    </p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Préstamo a domicilio</a></li>
+        <li><a href="catalogo.html">Catálogo y préstamos</a></li>
+        <li><a href="prestamo.html">Solicitar un préstamo</a></li>
+    </ul>
+</nav>
+
+<main id="contenido">
+    <section id="catalogo">
+        <h2>Colección General</h2>
+
+        <div tabindex="0" role="region" aria-labelledby="cap-catalogo">
+
+            <table>
+                <caption id="cap-catalogo">
+                    Colección General
+                </caption>
+
+                <colgroup span="3"></colgroup>
+
+                <colgroup span="1"></colgroup>
+
+                <colgroup span="2"></colgroup>          
+
+                <thead>
+                    <tr>
+                        <th scope="col" rowspan="2">Título</th>
+                        <th scope="col" rowspan="2">Autor</th>
+                        <th scope="col" rowspan="2">Año</th>
+                        <th scope="col" rowspan="2" id="ej-sala">
+                            En sala (e.1)
+                        </th>
+                        <th scope="colgroup" colspan="2" id="ej-dom">
+                            A domicilio (e.2 en adelante)
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th scope="col" id="ej-dom-total">
+                            Ejemplares
+                        </th>
+                        <th scope="col" id="ej-dom-disp">
+                            Disponibles
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            <cite>Clean Code</cite>
+                        </th>
+                        <td>Robert C. Martin</td>
+                        <td>2008</td>
+                        <td headers="ej-sala">1</td>
+                        <td headers="ej-dom ej-dom-total">3</td>
+                        <td headers="ej-dom ej-dom-disp">2</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">
+                            <cite>Eloquent JavaScript</cite>
+                        </th>
+                        <td>Marijn Haverbeke</td>
+                        <td>2024</td>
+                        <td headers="ej-sala">1</td>
+                        <td headers="ej-dom ej-dom-total">2</td>
+                        <td headers="ej-dom ej-dom-disp">0</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">
+                            <cite>HTML and CSS: Design and Build Websites</cite>
+                        </th>
+                        <td>Jon Duckett</td>
+                        <td>2011</td>
+                        <td headers="ej-sala">1</td>
+                        <td headers="ej-dom ej-dom-total">4</td>
+                        <td headers="ej-dom ej-dom-disp">3</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">
+                            <cite>Fundamentos de bases de datos</cite>
+                        </th>
+                        <td>Abraham Silberschatz</td>
+                        <td>2014</td>
+                        <td headers="ej-sala">1</td>
+                        <td headers="ej-dom ej-dom-total">2</td>
+                        <td headers="ej-dom ej-dom-disp">1</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">
+                            <cite>Ingeniería del software</cite>
+                        </th>
+                        <td>Ian Sommerville</td>
+                        <td>2011</td>
+                        <td headers="ej-sala">1</td>
+                        <td headers="ej-dom ej-dom-total">3</td>
+                        <td headers="ej-dom ej-dom-disp">1</td>
+                    </tr>
+                </tbody>
+
+
+            </table>
+
+        </div>
+    </section>
+
+    <section id="mis-prestamos">
+        <h2>Mis préstamos</h2>
+
+        <div tabindex="0" role="region" aria-labelledby="cap-prestamos">
+            <table aria-describedby="nota-prestamos">
+
+                <caption id="cap-prestamos">
+                    Préstamos activos
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Título</th>
+                        <th scope="col">Ejemplar</th>
+                        <th scope="col">Prestado el</th>
+                        <th scope="col">Devolver el</th>
+                        <th scope="col">Renovaciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            <cite>Clean Code</cite>
+                        </th>
+                        <td>e.2</td>
+                        <td>
+                            <time datetime="2026-11-03">
+                                3 nov. 2026
+                            </time>
+                        </td>
+                        <td>
+                            <time datetime="2026-11-24">
+                                24 nov. 2026
+                            </time>
+                        </td>
+                        <td>1 de 3</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">
+                            <cite>Fundamentos de bases de datos</cite>
+                        </th>
+                        <td>e.3</td>
+                        <td>
+                            <time datetime="2026-10-20">
+                                20 oct. 2026
+                            </time>
+                        </td>
+                        <td>
+                            <time datetime="2026-11-27">
+                                27 nov. 2026
+                            </time>
+                        </td>
+                        <td>3 de 3</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="4">
+                            Préstamos activos
+                        </th>
+                        <td>2</td>
+                    </tr>
+                </tfoot>
+
+            </table>
+
+            <p id="nota-prestamos">
+                La renovación está sujeta a disponibilidad y a que no existan multas o adeudos pendientes.
+            </p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <address>
+        Biblioteca Universitaria, Veraguas, Panamá
+    </address>
+
+    <p>
+        Actualizado:
+        <time datetime="2026-11-22">22 de noviembre de 2026</time>
+    </p>
+
+    <p><a href="#">Volver arriba</a></p>
+
+    <p>Los datos mostrados en este sitio son ficticios para fines académicos.</p>
+</footer>
+</body>
+</html>
