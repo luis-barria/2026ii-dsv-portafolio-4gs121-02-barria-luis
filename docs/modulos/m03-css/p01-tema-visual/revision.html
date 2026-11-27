@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     Informe de revisión de ConSentidos
+     Práctica 5 · Secciones 2.10 y 2.11 de la Unidad 2.
+     Archivo base: completa las partes marcadas con comentarios y pon la
+     fecha real de tu revisión en los dos elementos time.
+     ===================================================================== -->
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Paso 4: aquí va la misma política de seguridad que en las demás páginas -->
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self';
+               style-src 'self' https://fonts.googleapis.com;
+               font-src 'self' https://fonts.gstatic.com;
+               img-src 'self';
+               media-src 'self';
+               object-src 'self';
+               frame-src 'self' https://www.openstreetmap.org;
+               base-uri 'self';
+               form-action 'self'">  <meta name="description"
+        content="Informe de revisión de seguridad y calidad del sitio de la Clínica Veterinaria ConSentidos.">
+  <meta name="author" content="Nombre Apellido">
+  <title>Informe de revisión | Clínica Veterinaria ConSentidos</title>
+  <link rel="icon" href="assets/img/logo-consentidos.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/consentidos.css">
+  <link rel="stylesheet" href="assets/css/tema.css">
+</head>
+
+<body>
+  <a href="#contenido">Saltar al contenido</a>
+
+  <header id="inicio">
+    <img src="assets/img/logo-consentidos.svg" alt="" width="64" height="64">
+
+    <hgroup>
+      <h1>Informe de revisión</h1>
+      <p>Seguridad y calidad del sitio</p>
+    </hgroup>
+
+    <!-- Tus datos: siempre arriba, nunca en el pie -->
+    <p>
+      Luis Barria<br>
+      4GS121-02
+    </p>
+  </header>
+
+  <nav aria-label="Navegación del sitio">
+    <h2>El sitio</h2>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="componentes.html">Guía de componentes</a></li>
+      <li><a href="tarifas.html">Tarifas</a></li>
+      <li><a href="cita.html">Solicitar cita</a></li>
+      <li><a href="paginas/test.html">Página de prueba</a></li>
+    </ul>
+  </nav>
+
+  <main id="contenido">
+
+    <p>
+      Revisión del sitio completo, hecha el
+      <time datetime="2026-11-06">6 de noviembre de 2026</time>. Se
+      comprobaron las seis páginas publicadas y este informe.
+    </p>
+
+    <!-- =================================================================
+         1. LA POLÍTICA DE SEGURIDAD DE CONTENIDOS
+         ================================================================= -->
+    <section id="csp">
+      <h2>Política de seguridad de contenidos</h2>
+
+      <p>
+        La política CSP se construyó partiendo de una configuración restrictiva con default-src 'self'. Posteriormente se habilitaron únicamente los recursos necesarios para el funcionamiento del sitio, incluyendo Google Fonts y el mapa de OpenStreetMap, manteniendo el principio de mínimo privilegio.
+      </p>
+
+      <div tabindex="0" role="region" aria-labelledby="cap-csp">
+        <table>
+          <caption id="cap-csp">Directivas de la política y por qué están</caption>
+          <thead>
+            <tr>
+              <th scope="col">Directiva</th>
+              <th scope="col">Valor</th>
+              <th scope="col">Por qué</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><code>default-src</code></th>
+              <td><code>'self'</code></td>
+              <td>Regla por defecto: solo recursos del propio sitio.</td>
+            </tr>
+            script-src
+            style-src
+            font-src
+            img-src
+            media-src
+            object-src
+            frame-src
+            base-uri
+            form-action
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        La directiva <code>frame-ancestors</code> no está activa en este proyecto porque GitHub Pages no permite configurar cabeceras HTTP personalizadas. Esta directiva solamente funciona cuando es enviada por el servidor mediante una cabecera HTTP y no desde una etiqueta meta.
+      </p>
+    </section>
+
+    <!-- =================================================================
+         2. LA LISTA DE VERIFICACIÓN DE LA SECCIÓN 2.11.4
+         ================================================================= -->
+    <section id="verificacion">
+      <h2>Lista de verificación</h2>
+
+      <div tabindex="0" role="region" aria-labelledby="cap-verificacion">
+        <table>
+          <caption id="cap-verificacion">Comprobaciones en las siete páginas</caption>
+          <thead>
+            <tr>
+              <th scope="col">Comprobación</th>
+              <th scope="col">Resultado</th>
+              <th scope="col">Observación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Validan sin errores en validator.w3.org</th>
+              <td>Pendiente</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Un solo <code>h1</code> y jerarquía sin saltos</th>
+              <td>Pendiente</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row"><code>alt</code> en las imágenes y <code>title</code> en los <code>iframe</code></th>
+              <td>Pendiente</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Cada control con <code>label</code> y <code>name</code></th>
+              <td>Pendiente</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Tablas con <code>caption</code> y <code>scope</code></th>
+              <td>Pendiente</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Enlaces a otra pestaña con <code>rel="noopener noreferrer"</code></th>
+              <td>Pendiente</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Recorrido completo con el teclado y foco visible</th>
+              <td>Pendiente</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Nombres en minúsculas y rutas que funcionan publicadas</th>
+              <td>Pendiente</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Consola sin errores de la política</th>
+              <td>Pendiente</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Accesibilidad en Lighthouse</th>
+              <td>Pendiente</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         3. LA DEMOSTRACIÓN DEL REQUIRED
+         ================================================================= -->
+    <section id="validacion-cliente">
+      <h2>La validación del navegador no protege</h2>
+
+      <p>
+  Durante la demostración se eliminó el atributo <code>required</code> desde las herramientas de desarrollo del navegador y fue posible enviar el formulario sin completar todos los campos obligatorios. También se comprobó que algunos valores pueden modificarse desde el navegador antes de ser enviados. Esto demuestra que las validaciones del lado del cliente mejoran la experiencia de usuario, pero no constituyen una medida de seguridad real. La validación de los datos debe realizarse también en el servidor.
+</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <address>
+      <strong>Clínica Veterinaria ConSentidos</strong><br>
+      Avenida Central, Santiago de Veraguas, Panamá<br>
+      <a href="tel:+50799800000">+507 998-0000</a> |
+      <a href="mailto:citas@consentidos.example">citas@consentidos.example</a>
+    </address>
+
+    <p>
+      Última actualización:
+      <time datetime="2026-11-06">6 de noviembre de 2026</time>.
+    </p>
+
+    <p><a href="revision.html">Informe de revisión de seguridad y calidad</a></p>
+
+    <p>
+      <small>
+        &copy; 2026 Clínica Veterinaria ConSentidos. Proyecto académico del
+        curso Desarrollo de Software V, Universidad Tecnológica de Panamá,
+        Centro Regional de Veraguas. Los datos de contacto son ficticios.
+      </small>
+    </p>
+  </footer>
+</body>
+
+</html>

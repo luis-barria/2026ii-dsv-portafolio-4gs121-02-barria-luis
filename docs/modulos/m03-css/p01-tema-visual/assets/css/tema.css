@@ -1,0 +1,197 @@
+/* =====================================================================
+   tema.css — Tema visual de la Clínica Veterinaria ConSentidos
+   Desarrollo de Software V · Módulo III · Práctica 1
+
+   Esta hoja se enlaza DESPUÉS de consentidos.css en las siete páginas.
+   No modifiques consentidos.css: todo el cambio visual va aquí.
+
+   Reglas de la práctica
+   - Sin !important.
+   - Sin @layer (la guía explica por qué, en el Paso 5).
+   - Cada sección empieza con un comentario que explica qué cambia.
+
+   Sigue la guía de la práctica, paso a paso, en este orden.
+   ===================================================================== */
+
+/* ---------------------------------------------------------------------
+   0. Importaciones (Paso 4)
+      @import tiene que ir antes que cualquier otra regla de la hoja.
+   --------------------------------------------------------------------- */
+@import url("../vendor/fontawesome/css/solid.min.css");
+
+/* ---------------------------------------------------------------------
+   1. Fuente de los títulos (Paso 2)
+      @font-face con assets/fonts/Bitter-VF.woff2
+   --------------------------------------------------------------------- */
+@font-face {
+    font-family: "Bitter";
+    src: url("../fonts/Bitter-VF.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ---------------------------------------------------------------------
+   2. Paleta (Paso 1)
+      Redefine en :root las variables de consentidos.css, en modo claro
+      y en modo oscuro. Anota junto a cada color de texto su contraste.
+   --------------------------------------------------------------------- */
+:root {
+    --marino: #0B6363;
+    --marino-claro: #DDF0EE;
+    --ambar: #F2A65A;
+    --fondo: #FAF7F2;
+    --superficie: #FFFFFF;
+    --borde: #D8D2C8;
+    --texto: #1F2A2E;
+    --texto-suave: #4F5B5F;
+    --codigo-fondo: #123B3B;
+    --cabecera-fondo: #123B3B;
+    --cabecera-texto: #F6F3EE;
+    --cabecera-suave: #CFE3E0;
+    --foco: #0B6363;
+
+    --visitado: #6B3F8F;
+    --fuente-titulos: "Bitter", Georgia, "Times New Roman", serif;
+    --transicion: 0.2s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --marino: #7FDDC7;
+        --marino-claro: #1C3A38;
+        --fondo: #0E1A1A;
+        --superficie: #15262A;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   3. Tipografía (Paso 2)
+      Familia de los títulos, escala, interlineado y longitud de línea.
+   --------------------------------------------------------------------- */
+h1, h2, h3, h4 {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+}
+
+/* El título del sitio */
+body > header h1 {
+    font-weight: 750;
+    letter-spacing: 0;
+}
+
+/* Escala de títulos de sección */
+section > h2 {
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 1.875rem);
+    border-bottom-color: var(--ambar);
+}
+
+/* Interlineado */
+body {
+    line-height: 1.65;
+}
+
+main p,
+main li {
+    max-width: 65ch;
+    text-wrap: pretty;
+}
+
+/* ---------------------------------------------------------------------
+   4. Enlaces y estados (Paso 3)
+      Orden LVHA dentro de <main>, menú con transición y
+      prefers-reduced-motion.
+   --------------------------------------------------------------------- */
+main a:link {
+    color: var(--marino);
+}
+
+main a:visited {
+    color: var(--visitado);
+}
+
+main a:hover {
+    text-decoration-thickness: 0.16em;
+    text-decoration-color: var(--ambar);
+}
+
+main a:active {
+    color: var(--texto);
+}
+
+/* Menú: la transición se declara en el estado normal */
+body > nav a {
+    transition: background-color var(--transicion),
+                color var(--transicion);
+}
+
+body > nav a:hover {
+    background-color: var(--marino-claro);
+    color: var(--marino);
+}
+
+/* Botones del formulario */
+button,
+input[type="submit"] {
+    transition: filter var(--transicion),
+                transform var(--transicion);
+}
+
+/* Usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+    body > nav a,
+    button,
+    input[type="submit"] {
+        transition: none;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   5. Iconos (Paso 4)
+      Font Awesome con ::before en el menú y en los datos de contacto.
+   --------------------------------------------------------------------- */
+body > nav a::before,
+body > footer address a::before {
+    display: inline-block;
+    font: var(--fa-font-solid);
+    width: 1.25em;
+    margin-right: 0.5em;
+    text-align: center;
+    color: var(--marino);
+}
+
+body > footer address a::before {
+    color: var(--ambar);
+}
+
+body > nav a[href$="index.html"]::before {
+    content: "\f015" / "";
+}
+
+body > nav a[href$="servicios.html"]::before {
+    content: "\f0f1" / "";
+}
+
+body > nav a[href$="componentes.html"]::before {
+    content: "\f518" / "";
+}
+
+body > nav a[href$="tarifas.html"]::before {
+    content: "\f02c" / "";
+}
+
+body > nav a[href$="cita.html"]::before {
+    content: "\f274" / "";
+}
+
+body > nav a[href$="test.html"]::before {
+    content: "\f0c3" / "";
+}
+
+body > footer address a[href^="tel:"]::before {
+    content: "\f095" / "";
+}
+
+body > footer address a[href^="mailto:"]::before {
+    content: "\f0e0" / "";
+}
